@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Назва проекту</title>
+    <style>
+        h1 { text-align: center; }
+        em { color: blue; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid black; text-align: left; padding: 8px; }
+        th { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Назва проекту</h1>
+    <p><em>ПІБ: Вовк Андрій Олегович, група: ІПЗ-22010бск</em></p>
+
+    <h2>Departments</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Room Number</th>
+        </tr>
+        {% for department in departments %}
+        <tr>
+            <td>{{ department.id }}</td>
+            <td>{{ department.name }}</td>
+            <td>{{ department.phone }}</td>
+            <td>{{ department.room_number }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+</body>
+</html>
